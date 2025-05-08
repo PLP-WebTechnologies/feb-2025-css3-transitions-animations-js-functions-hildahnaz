@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Animations with LocalStorage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Interactive Animations</h1>
+        
+        <div class="control-panel">
+            <button id="theme-toggle" class="btn theme-toggle">Toggle Dark Mode</button>
+            <button id="rotate-btn" class="btn">Rotate Image</button>
+            <button id="bounce-btn" class="btn">Bounce Image</button>
+            <button id="shake-btn" class="btn">Shake Image</button>
+        </div>
+        
+        <div class="image-container">
+            <img id="animated-image" class="image" src="https://images.pexels.com/photos/8001217/pexels-photo-8001217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Colorful gradient">
+        </div>
+        
+        <div class="preference-panel">
+            <h2>Your Preferences</h2>
+            <div class="preference-item">
+                <label for="default-animation">Default Animation:</label>
+                <select id="default-animation">
+                    <option value="none">None</option>
+                    <option value="rotate">Rotate</option>
+                    <option value="bounce">Bounce</option>
+                    <option value="shake">Shake</option>
+                </select>
+            </div>
+            <div class="preference-item">
+                <label for="animation-speed">Animation Speed:</label>
+                <select id="animation-speed">
+                    <option value="slow">Slow</option>
+                    <option value="normal" selected>Normal</option>
+                    <option value="fast">Fast</option>
+                </select>
+            </div>
+            <button id="save-prefs" class="btn">Save Preferences</button>
+        </div>
+        
+        <div id="status-message" class="status-message"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
